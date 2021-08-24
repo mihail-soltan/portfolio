@@ -21,12 +21,19 @@ const useStyles = makeStyles({
     width: "100%",
     maxWidth: 400,
     margin: 20,
+    textAlign: "justify",
   },
   tech: {
     fontSize: 24,
     width: "100%",
     margin: 20,
+    textAlign: "justify",
+    maxWidth: 400,
+    paddingBottom: 20,
   },
+  cardActions: {
+    justifyContent: "space-around",
+  }
 });
 
 export default function Profile() {
@@ -65,7 +72,7 @@ export default function Profile() {
               </Typography>
             </CardContent>
           </CardActionArea>
-          <CardActions>
+          <CardActions className={classes.cardActions}>
             <a href="https://github.com/mihail-soltan" target="_blank">
               <IconButton aria-label="delete">
                 <GitHubIcon />
@@ -92,12 +99,9 @@ export default function Profile() {
             constantly diving deep into new frameworks and libraries.
           </Typography>
           <Typography  className={classes.tech}>
-            HTML5 | CSS3 | BootStrap | JavaScript | Git
-            <br/>
-            React Bootstrap | Strapi | Contentful 
-            <br/>
-            React | REST APIs | SQL | MongoDB | NodeJS 
-            <br/>
+            HTML5 | CSS3 | BootStrap | JavaScript | Git | 
+            React Bootstrap | Strapi | Contentful | 
+            React | REST APIs | SQL | MongoDB | NodeJS |
             Express | Heroku | Netlify 
           </Typography>
         </Box>
