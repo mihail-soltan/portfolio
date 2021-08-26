@@ -20,13 +20,14 @@ const useStyles = makeStyles({
   text: {
     width: "100%",
     maxWidth: 400,
-    margin: 20,
+    padding: 20,
     textAlign: "justify",
   },
   tech: {
     fontSize: 24,
     width: "100%",
-    margin: 20,
+    padding: 20,
+    marginBottom: 20,
     textAlign: "justify",
     maxWidth: 400,
     paddingBottom: 20,
@@ -38,7 +39,6 @@ const useStyles = makeStyles({
 
 export default function Profile() {
   const classes = useStyles();
-
   return (
     <>
       <Box
