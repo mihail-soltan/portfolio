@@ -24,11 +24,11 @@ const useStyles = makeStyles((theme) => ({
       width: 960,
     },
     [theme.breakpoints.up("lg")]: {
-      width: 960,
+      width: 1200,
     },
   },
   fields: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(2),
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",

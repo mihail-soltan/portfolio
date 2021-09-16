@@ -31,7 +31,7 @@ export default function Profile() {
   const classes = useStyles();
   return (
     <>
-      <VerticalTimeline>
+      <VerticalTimeline className="timeline">
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: "#7A3577", color: "#fff" }}

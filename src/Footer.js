@@ -17,11 +17,11 @@ const theme = createTheme({
 
 export default function Footer() {
   return (
-    <ThemeProvider >
-      <footer className="footerBox" theme={theme}>
+    
+      <footer className="footerBox">
         <p>all rights reserved © 2021 | Mihail Soltan</p>
       </footer>
-    </ThemeProvider>
+  
     // <Box  className="footerBox">
     //   <Grid style={{ alignItems: "center"}}>
     //     <Grid item

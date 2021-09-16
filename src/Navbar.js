@@ -20,17 +20,17 @@ export default function CenteredTabs() {
     <div>
       <ThemeProvider theme={theme}>
         <Box display="flex"  justifyContent="space-around">
-        <Link to="/">
-          <Button  size="large" startIcon={<HomeIcon />} color="primary">
+        <Link style={{textDecoration: "none"}} to="/">
+          <Button size="large" startIcon={<HomeIcon />} color="primary">
             HOME
           </Button>
         </Link>
-        <Link to="/projects">
+        <Link style={{textDecoration: "none"}} to="/projects">
           <Button  size="large" startIcon={<AppsIcon />}color="primary">
             PROJECTS
           </Button>
         </Link>
-        <Link to="/contact">
+        <Link style={{textDecoration: "none"}} to="/contact">
           <Button  size="large" startIcon={<MailOutlineIcon/>} color="primary">
             CONTACT
             </Button>
