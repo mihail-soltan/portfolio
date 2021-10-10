@@ -32,6 +32,51 @@ export default function Profile() {
   return (
     <>
       <VerticalTimeline className="timeline">
+      <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: "#7A3577", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  #7A3577" }}
+          date="October 2021"
+          iconStyle={{ background: "#7A3577", color: "#fff" }}
+          icon={<CodeIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">
+            Jam Sessions (Full-Stack Project in progress)
+          </h3>
+          <Card className={classes.root}>
+            <CardActionArea>
+              <a
+                href="https://friendly-lalande-258d32.netlify.app/"
+                target="_blank"
+              >
+                <CardMedia
+                  className={classes.media}
+                  image="jamsession.png"
+                  title="Jam Sessions"
+                />
+              </a>
+            </CardActionArea>
+          </Card>
+          <p>
+            React | HTML | CSS | JavaScript | MongoDB | Express | Node JS
+          </p>
+          <a
+            href="https://github.com/mihail-soltan/Jam-Sessions-Backend"
+            target="_blank"
+          >
+            <IconButton aria-label="delete">
+              <GitHubIcon />
+            </IconButton>
+          </a>
+          <a
+            href="https://github.com/mihail-soltan/jam-sessions-frontend"
+            target="_blank"
+          >
+            <IconButton aria-label="delete">
+              <GitHubIcon />
+            </IconButton>
+          </a>
+        </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: "#7A3577", color: "#fff" }}
