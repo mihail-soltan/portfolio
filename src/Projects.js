@@ -32,7 +32,47 @@ export default function Profile() {
   return (
     <>
       <VerticalTimeline className="timeline">
-      <VerticalTimelineElement
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: "#7A3577", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  #7A3577" }}
+          date="November 2021"
+          iconStyle={{ background: "#7A3577", color: "#fff" }}
+          icon={<CodeIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">
+            Recharge (Full Stack colab in progress)
+          </h3>
+          <Card className={classes.root}>
+            <CardActionArea>
+              <a href="£" target="_blank">
+                <CardMedia
+                  className={classes.media}
+                  image="recharge.png"
+                  title="Recharge"
+                />
+              </a>
+            </CardActionArea>
+          </Card>
+          <p>React | HTML | CSS | JavaScript | MongoDB | Express | Node JS</p>
+          <a
+            href="https://github.com/mihail-soltan/recharge-backend"
+            target="_blank"
+          >
+            <IconButton aria-label="delete">
+              <GitHubIcon />
+            </IconButton>
+          </a>
+          <a
+            href="https://github.com/gaiasamadhi/take-a-break-frontend"
+            target="_blank"
+          >
+            <IconButton aria-label="delete">
+              <GitHubIcon />
+            </IconButton>
+          </a>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: "#7A3577", color: "#fff" }}
           contentArrowStyle={{ borderRight: "7px solid  #7A3577" }}
@@ -57,9 +97,7 @@ export default function Profile() {
               </a>
             </CardActionArea>
           </Card>
-          <p>
-            React | HTML | CSS | JavaScript | MongoDB | Express | Node JS
-          </p>
+          <p>React | HTML | CSS | JavaScript | MongoDB | Express | Node JS</p>
           <a
             href="https://github.com/mihail-soltan/Jam-Sessions-Backend"
             target="_blank"
@@ -186,7 +224,9 @@ export default function Profile() {
           iconStyle={{ background: "#7A3577", color: "#fff" }}
           icon={<CodeIcon />}
         >
-          <h3 className="vertical-timeline-element-title">To Do List (Group Project)</h3>
+          <h3 className="vertical-timeline-element-title">
+            To Do List (Group Project)
+          </h3>
           <Card className={classes.root}>
             <CardActionArea>
               <a
@@ -202,7 +242,10 @@ export default function Profile() {
             </CardActionArea>
           </Card>
           <p>JavaScript | CSS3 | HTML5| GitHub Pages</p>
-          <a href="https://github.com/mihail-soltan/To-do-list-app" target="_blank">
+          <a
+            href="https://github.com/mihail-soltan/To-do-list-app"
+            target="_blank"
+          >
             <IconButton aria-label="delete">
               <GitHubIcon />
             </IconButton>
