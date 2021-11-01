@@ -41,11 +41,11 @@ export default function Profile() {
           icon={<CodeIcon />}
         >
           <h3 className="vertical-timeline-element-title">
-            Recharge (Full Stack colab in progress)
+            Recharge (Full Stack colab)
           </h3>
           <Card className={classes.root}>
             <CardActionArea>
-              <a href="£" target="_blank">
+              <a href="https://cocky-sammet-437ef2.netlify.app/" target="_blank">
                 <CardMedia
                   className={classes.media}
                   image="recharge.png"
@@ -64,7 +64,7 @@ export default function Profile() {
             </IconButton>
           </a>
           <a
-            href="https://github.com/gaiasamadhi/take-a-break-frontend"
+            href="https://github.com/mihail-soltan/take-a-break-frontend"
             target="_blank"
           >
             <IconButton aria-label="delete">
