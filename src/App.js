@@ -4,6 +4,7 @@ import Box from "@material-ui/core/Box";
 import Profile from "./Profile";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import Admin from "./Admin";
 import { Switch, Route } from "react-router-dom";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
@@ -39,6 +40,9 @@ function App() {
         </Route>
         <Route path="/contact">
           <Contact />
+        </Route>
+        <Route path="/admin">
+          <Admin />
         </Route>
       </Switch>
       {/* </Box> */}
