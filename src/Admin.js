@@ -1,31 +1,114 @@
+import axios from 'axios';
 import Box from "@material-ui/core/Box";
-import './App.css'
+import "./App.css";
 import { useState } from "react";
 export default function Admin() {
-  const projectAPI = 'https://portfolio-backend3.herokuapp.com/'
+  const projectAPI = "https://portfolio-backend3.herokuapp.com/";
   const initialProject = {
-    title: '',
-    source: '',
-    stack: '',
+    title: "",
+    source: "",
+    stack: "",
     github: {
-      frontend: '',
-      backend: '',
+      frontend: "",
+      backend: "",
     },
-    picture: ''
-  }
-  const [project, setProject] = useState(initialProject)
+    picture: "",
+  };
+  const [project, setProject] = useState(initialProject);
+
   const handleChange = (e) => {
-    console.log(e.target.value)
+    const { name, value } = e.target;
+    const newData = {
+      ...project,
+      [name]: value,
+    };
+    setProject(newData);
+    console.log(newData);
+    console.log(e.target);
+  };
+  const handleSourceCode = (e) => {
+    const { name, value } = e.target;
+    const newData = {
+      ...project,
+      github: { ...project.github, [name]: value },
+    };
+    setProject(newData);
+    console.log(newData);
+    console.log(e.target);
+  };
+  function submit(e) {
+    e.preventDefault();
+    axios
+      .post(projectAPI, {
+        title: project.title,
+        source: project.source,
+        stack: project.stack,
+        github: {frontend: project.github.frontend,
+          backend: project.github.backend
+        },
+        picture: project.picture,
+      })
+      .then((res) => {
+        console.log(res.data);
+      })
+
+      .catch((error) => {
+        if (error.response) {
+          console.log(error.response);
+        } else if (error.request) {
+          console.log(error.request);
+        } else if (error.message) {
+          console.log(error.message);
+        }
+      });
   }
-  return(
-  <Box display="flex" justifyContent="center">
-      <form>
-    <input type="text" onChange={handleChange}placeholder="title"id="title" name="title"/>
-    <input type="text" onChange={handleChange}placeholder="source"id="source" name="source" />
-    <input type="text" onChange={handleChange}placeholder="stack"id="stack" name="stack" />
-    <input type="text" onChange={handleChange}placeholder="github"id="github" name="github" />
-    <input type="file"id="files"/>
-    <input type="submit" value="submit"/> 
-    </form>
-  </Box>)
+  return (
+    <Box display="flex" justifyContent="center">
+      <form onSubmit={submit}>
+        <input
+          type="text"
+          onChange={handleChange}
+          placeholder="title"
+          id="title"
+          name="title"
+        />
+        <input
+          type="text"
+          onChange={handleChange}
+          placeholder="source"
+          id="source"
+          name="source"
+        />
+        <input
+          type="text"
+          onChange={handleChange}
+          placeholder="stack"
+          id="stack"
+          name="stack"
+        />
+        <input
+          type="text"
+          onChange={handleSourceCode}
+          placeholder="frontend"
+          id="frontend"
+          name="frontend"
+        />
+        <input
+          type="text"
+          onChange={handleSourceCode}
+          placeholder="backend"
+          id="backend"
+          name="backend"
+        />
+        <input
+          type="text"
+          onChange={handleChange}
+          placeholder="picture"
+          id="picture"
+          name="picture"
+        />
+        <input type="submit" value="submit" />
+      </form>
+    </Box>
+  );
 }
