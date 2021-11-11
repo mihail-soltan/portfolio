@@ -26,11 +26,11 @@ const useStyles = makeStyles({
   tech: {
     fontSize: 24,
     width: "100%",
-    padding: 20,
-    marginBottom: 20,
+    padding: 15,
+    // marginBottom: 20,
     textAlign: "justify",
     maxWidth: 400,
-    paddingBottom: 20,
+    // paddingBottom: 20,
   },
   cardActions: {
     justifyContent: "space-around",
@@ -59,7 +59,7 @@ export default function Profile() {
             <CardMedia
               component="img"
               alt="web developer"
-              height="250"
+              height="220"
               image="pic2.jpg"
               title="Contemplative Reptile"
             />
