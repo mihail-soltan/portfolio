@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   fields: {
-    margin: theme.spacing(2),
+    marginTop: "16px",
+    marginBottom: "16px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -125,7 +126,7 @@ export default function ComposedTextField() {
             type="submit"
             variant="contained"
             color="primary"
-            className={classes.fields}
+            // className={classes.fields}
           >
             Submit
           </Button>

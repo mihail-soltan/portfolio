@@ -13,6 +13,7 @@ export default function Admin() {
       backend: "",
     },
     picture: "",
+    date: "",
   };
   const [project, setProject] = useState(initialProject);
 
@@ -23,8 +24,6 @@ export default function Admin() {
       [name]: value,
     };
     setProject(newData);
-    console.log(newData);
-    console.log(e.target);
   };
   const handleSourceCode = (e) => {
     const { name, value } = e.target;
@@ -33,8 +32,6 @@ export default function Admin() {
       github: { ...project.github, [name]: value },
     };
     setProject(newData);
-    console.log(newData);
-    console.log(e.target);
   };
   function submit(e) {
     e.preventDefault();
@@ -47,6 +44,7 @@ export default function Admin() {
           backend: project.github.backend
         },
         picture: project.picture,
+        date: project.date,
       })
       .then((res) => {
         console.log(res.data);
@@ -106,6 +104,13 @@ export default function Admin() {
           placeholder="picture"
           id="picture"
           name="picture"
+        />
+                <input
+          type="text"
+          onChange={handleChange}
+          placeholder="date"
+          id="date"
+          name="date"
         />
         <input type="submit" value="submit" />
       </form>

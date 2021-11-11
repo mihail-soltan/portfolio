@@ -19,7 +19,7 @@ body {
   font-size: 24px;
   font-family: 'Oswald', sans-serif;
   padding: 5px;
-
+  text-align: center;
 }
 
 .footerBox {
@@ -36,13 +36,13 @@ body {
   opacity: 0.8;   
 }
 
-form {
+ form {
   display: flex;
   flex-direction: column;
 }
 form input {
-  margin: 10px;
-}
+  margin: 5px;
+} 
 @media(max-width: 400px){
  
 }
