@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Public+Sans&family=Titan+One&display=swap');
 
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  /* height: 100vh; */
   justify-content: space-between;
   background-color: #212121;
 }
@@ -49,3 +49,58 @@ form input {
 @media(max-width: 375px){
  
 }
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.countdown-item {
+  margin: 1rem;
+}
+.countdown-timer {
+  display: flex;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.countdown-value {
+  font-size: 5rem;
+  color: #333;
+  animation: pulse 1s infinite;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+h1 {
+  font-family: 'Titan One', cursive;
+  color: #FFAC1C;
+  letter-spacing: 2px;
+  font-size: 4rem;
+  text-shadow: -2.5px -2.5px 0 #000, 2.5px -2.5px 0 #000, -2.5px 2.5px 0 #000, 2.5px 2.5px 0 #000;
+  /* animation: breathing 3s infinite ; */
+  }
