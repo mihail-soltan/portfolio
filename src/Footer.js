@@ -15,29 +15,13 @@ const theme = createTheme({
   },
 });
 
+let currentYear = new Date().getFullYear()
+
 export default function Footer() {
   return (
     
       <footer className="footerBox">
-        <p>all rights reserved © 2021 | Mihail Soltan</p>
+        <p>all rights reserved © {currentYear} | Mihail Soltan</p>
       </footer>
-  
-    // <Box  className="footerBox">
-    //   <Grid style={{ alignItems: "center"}}>
-    //     <Grid item
-    //       style={{
-    //         display: "flex",
-    //         alignItems: "center",
-    //         justifyContent: "center",
-    //         // backgroundColor: "whitesmoke",
-    //         // color: "#3B3F39",
-    //         fontSize: "16px",
-    //         padding: "10px",
-    //       }}
-    //     >
-    //         all rights reserved © 2021 | Mihail Soltan
-    //     </Grid >
-    //   </Grid>
-    // </Box>
   );
 }

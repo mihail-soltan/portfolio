@@ -5,6 +5,7 @@ import Profile from "./Profile";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Admin from "./Admin";
+import CountdownToFutureDate from "./Countdown";
 import { Switch, Route } from "react-router-dom";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
@@ -23,31 +24,37 @@ function App() {
       }),
     [prefersDarkMode]
   );
+  const futureDate = new Date("2023-03-01T00:00:00");
+
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      {/* <Box display="block" justifyContent="center" m={1} p={1} bgcolor="background.paper"> */}
-      <CenteredTabs />
-      <Switch>
-        <Route exact path="/">
-          <Box>
-            <Profile />
-          </Box>
-        </Route>
-        <Route path="/projects">
-          <Projects />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="/admin">
-          <Admin />
-        </Route>
-      </Switch>
-      {/* </Box> */}
-      <Footer />
-    </ThemeProvider>
+    // <ThemeProvider theme={theme}>
+    //   <CssBaseline />
+    //   {/* <Box display="block" justifyContent="center" m={1} p={1} bgcolor="background.paper"> */}
+    //   <CenteredTabs />
+    //   <Switch>
+    //     <Route exact path="/">
+    //       <Box>
+    //         <Profile />
+    //       </Box>
+    //     </Route>
+    //     <Route path="/projects">
+    //       <Projects />
+    //     </Route>
+    //     <Route path="/contact">
+    //       <Contact />
+    //     </Route>
+    //     <Route path="/admin">
+    //       <Admin />
+    //     </Route>
+    //   </Switch>
+    //   {/* </Box> */}
+    //   <Footer />
+    // </ThemeProvider>
+    <>
+<CountdownToFutureDate futureDate={futureDate} />;
+
+    </>
   );
 }
 
