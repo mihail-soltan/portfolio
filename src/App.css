@@ -43,12 +43,7 @@ body {
 form input {
   margin: 5px;
 } 
-@media(max-width: 400px){
- 
-}
-@media(max-width: 375px){
- 
-}
+
 .countdown-container {
   display: flex;
   flex-direction: column;
@@ -91,9 +86,9 @@ form input {
 
 .countdown-value {
   font-size: 5rem;
-  color: #333;
+  color: #fff;
   animation: pulse 1s infinite;
-  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
 }
 
 h1 {
@@ -101,6 +96,18 @@ h1 {
   color: #FFAC1C;
   letter-spacing: 2px;
   font-size: 4rem;
-  text-shadow: -2.5px -2.5px 0 #000, 2.5px -2.5px 0 #000, -2.5px 2.5px 0 #000, 2.5px 2.5px 0 #000;
+  text-shadow: -2.5px -2.5px 0 #fff, 2.5px -2.5px 0 #fff, -2.5px 2.5px 0 #fff, 2.5px 2.5px 0 #fff;
   /* animation: breathing 3s infinite ; */
   }
+
+
+  @media(max-width: 620px){
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .countdown-value {
+      font-size: 2.5rem;
+    }
+  }
+  
