@@ -24,7 +24,7 @@ function App() {
       }),
     [prefersDarkMode]
   );
-  const futureDate = new Date("2023-03-01T00:00:00");
+  const futureDate = new Date("2023-03-15T00:00:00");
 
 
   return (
